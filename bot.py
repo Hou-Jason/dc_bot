@@ -41,7 +41,7 @@ async def play_next(ctx):
     now_playing = song
 
     with yt_dlp.YoutubeDL(ydl_opts) as ydl:
-        info = ydl.extract_info(f"ytsearch:{song}", download=False)
+        info = ydl.extract_info(f"ytsearch1:{song}", download=False)
         video = info['entries'][0]
 
         url = video['url']
